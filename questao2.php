@@ -62,20 +62,11 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 if($_POST){
 $valor = $_POST['valor'];
 echo "<br><br>";
-if(($valor%10)==0){
-echo "<br>valor divisivel por 10";
-}else{
-echo "<br>O valor ".$valor." nao e divisivel por 10";
+echo "<br>Valor ".$valor." e divisivel por ";
+for($i=1;$i<=$valor;$i++){
+if(($valor%$i)==0){
+echo "<br>".$i;
 }
-if(($valor%5)==0){
-echo "<br>valor divisivel por 5";
-}else{
-echo "<br>O valor ".$valor." nao e divisivel por 5";
-}
-if(($valor%2)==0){
-echo "<br>valor divisivel por 2";
-}else{
-echo "<br>O valor ".$valor." nao e divisivel por 2";
 }
 }
 ?>
